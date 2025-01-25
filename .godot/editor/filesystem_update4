@@ -1,3 +1,10 @@
 res://scenes/MainScene.tscn
-res://scripts/game_layer.gd
 res://scripts/player.gd
+res://scripts/game_layer.gd
+res://scripts/bubble.gd
+res://scripts/oxygen.gd
+res://README.md
+res://scripts/dice.gd
+res://scripts/camera.gd
+res://scripts/game_manager.gd
+res://scripts/globals.gd
