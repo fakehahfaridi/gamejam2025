@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cqqhw7pbxmlde"]
+[gd_scene load_steps=14 format=3 uid="uid://cqqhw7pbxmlde"]
 
 [ext_resource type="Texture2D" uid="uid://bw3nc0d82rq4v" path="res://tiles/Atlantis/Tileset1.png" id="1_jtxyx"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="2_0fd7p"]
@@ -7,6 +7,8 @@
 [ext_resource type="Script" path="res://scripts/bubble.gd" id="5_ccgxm"]
 [ext_resource type="Texture2D" uid="uid://21jmulaboyfa" path="res://other/Screenshot 2024-05-03 123359-orig.png" id="5_jlvj0"]
 [ext_resource type="Script" path="res://scripts/game_layer.gd" id="7_08wnj"]
+[ext_resource type="Script" path="res://scripts/inventory.gd" id="8_7oqw6"]
+[ext_resource type="Script" path="res://scripts/shop.gd" id="9_wyma7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_udbc6"]
 
@@ -556,3 +558,9 @@ script = ExtResource("7_08wnj")
 position = Vector2(-23, -47)
 offset = Vector2(80, 80)
 zoom = Vector2(3.5, 3.5)
+
+[node name="Inventory" type="Node2D" parent="."]
+script = ExtResource("8_7oqw6")
+
+[node name="Shop" type="Node2D" parent="."]
+script = ExtResource("9_wyma7")
