@@ -1,0 +1,3 @@
+res://scenes/MainScene.tscn
+res://scripts/game_layer.gd
+res://scripts/player.gd

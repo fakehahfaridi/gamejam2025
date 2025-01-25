@@ -1,32 +1,32 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1737818303
-README.md::TextFile::-1::1737759129::0::1::::<><>::
+::res://::1737821812
+README.md::TextFile::-1::1737818397::0::1::::<><>::
 ::res://bgs/::1737758108
-::res://other/::1737758146
-icon.svg::CompressedTexture2D::1163057623306170189::1737752122::1737758146::1::::<><>::
-Screenshot 2024-05-03 123359-orig.png::CompressedTexture2D::1949341549755951434::1737752284::1737758115::1::::<><>::
-::res://scenes/::1737776989
-MainScene.tscn::PackedScene::5929358920070876102::1737776989::0::1::::<><>::uid://bw3nc0d82rq4v::::res://tiles/Atlantis/Tileset1.png<>res://scripts/player.gd<>uid://qtnnh3n1kntd::::res://other/icon.svg<>res://scripts/oxygen.gd<>res://scripts/bubble.gd<>uid://21jmulaboyfa::::res://other/Screenshot 2024-05-03 123359-orig.png<>res://scripts/game_layer.gd
-::res://scripts/::1737774233
-bubble.gd::GDScript::-1::1737760780::0::1::::<>Area2D<>::
-game_layer.gd::GDScript::-1::1737766286::0::1::::<>TileMapLayer<>::
-oxygen.gd::GDScript::-1::1737760145::0::1::::<>ProgressBar<>::
-player.gd::GDScript::-1::1737774233::0::1::::<>CharacterBody2D<>::
-tilemap.gd::GDScript::-1::1737762974::0::1::::<>TileMapLayer<>::
+::res://other/::1737818471
+icon.svg::CompressedTexture2D::1163057623306170189::1737818397::1737818471::1::::<><>::
+Screenshot 2024-05-03 123359-orig.png::CompressedTexture2D::1949341549755951434::1737818397::1737818471::1::::<><>::
+::res://scenes/::1737821636
+MainScene.tscn::PackedScene::5929358920070876102::1737821636::0::1::::<><>::uid://bw3nc0d82rq4v::::res://tiles/Atlantis/Tileset1.png<>res://scripts/player.gd<>uid://qtnnh3n1kntd::::res://other/icon.svg<>res://scripts/oxygen.gd<>res://scripts/bubble.gd<>uid://21jmulaboyfa::::res://other/Screenshot 2024-05-03 123359-orig.png<>res://scripts/game_layer.gd
+::res://scripts/::1737821509
+bubble.gd::GDScript::-1::1737818397::0::1::::<>Area2D<>::
+game_layer.gd::GDScript::-1::1737821357::0::1::::<>TileMapLayer<>::
+oxygen.gd::GDScript::-1::1737818397::0::1::::<>ProgressBar<>::
+player.gd::GDScript::-1::1737821509::0::1::::<>CharacterBody2D<>::
+tilemap.gd::GDScript::-1::1737818397::0::1::::<>TileMapLayer<>::
 ::res://sprites/::1737758138
-::res://tiles/::1737758639
-::res://tiles/Atlantis/::1737758640
-Atlantis2_SpriteAnimation.png::CompressedTexture2D::6872707367908198474::1737758639::1737758640::1::::<><>::
-ColorPalette.png::CompressedTexture2D::1901290705147812394::1737758640::1737758640::1::::<><>::
-Icons_Preview.png::CompressedTexture2D::6583264748110827747::1737758640::1737758640::1::::<><>::
-Items.png::CompressedTexture2D::722302618329741978::1737758640::1737758640::1::::<><>::
-Preview2.png::CompressedTexture2D::1031911913913365543::1737758640::1737758640::1::::<><>::
-Preview.png::CompressedTexture2D::2552528848650594313::1737758640::1737758640::1::::<><>::
-Screenshot (284).png::CompressedTexture2D::7161043518177756282::1737758640::1737758640::1::::<><>::
-Screenshot (285).png::CompressedTexture2D::705316927283686545::1737758640::1737758640::1::::<><>::
-Screenshot (286).png::CompressedTexture2D::1063761215956781876::1737758640::1737758640::1::::<><>::
-Screenshot (289).png::CompressedTexture2D::8888048028244264615::1737758640::1737758640::1::::<><>::
-Tileset1.png::CompressedTexture2D::3989172032591565639::1737758640::1737758640::1::::<><>::
-Tileset2.png::CompressedTexture2D::2623158406826308073::1737758640::1737758640::1::::<><>::
-Tileset3.png::CompressedTexture2D::6054151867196588781::1737758640::1737758640::1::::<><>::
-TileSets_Preview.png::CompressedTexture2D::2180844510259689564::1737758640::1737758640::1::::<><>::
+::res://tiles/::1737818397
+::res://tiles/Atlantis/::1737818471
+Atlantis2_SpriteAnimation.png::CompressedTexture2D::6872707367908198474::1737818397::1737818471::1::::<><>::
+ColorPalette.png::CompressedTexture2D::1901290705147812394::1737818397::1737818471::1::::<><>::
+Icons_Preview.png::CompressedTexture2D::6583264748110827747::1737818397::1737818471::1::::<><>::
+Items.png::CompressedTexture2D::722302618329741978::1737818397::1737818471::1::::<><>::
+Preview2.png::CompressedTexture2D::1031911913913365543::1737818397::1737818471::1::::<><>::
+Preview.png::CompressedTexture2D::2552528848650594313::1737818397::1737818471::1::::<><>::
+Screenshot (284).png::CompressedTexture2D::7161043518177756282::1737818397::1737818471::1::::<><>::
+Screenshot (285).png::CompressedTexture2D::705316927283686545::1737818397::1737818471::1::::<><>::
+Screenshot (286).png::CompressedTexture2D::1063761215956781876::1737818397::1737818471::1::::<><>::
+Screenshot (289).png::CompressedTexture2D::8888048028244264615::1737818397::1737818471::1::::<><>::
+Tileset1.png::CompressedTexture2D::3989172032591565639::1737818397::1737818471::1::::<><>::
+Tileset2.png::CompressedTexture2D::2623158406826308073::1737818397::1737818471::1::::<><>::
+Tileset3.png::CompressedTexture2D::6054151867196588781::1737818397::1737818471::1::::<><>::
+TileSets_Preview.png::CompressedTexture2D::2180844510259689564::1737818397::1737818471::1::::<><>::
