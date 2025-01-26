@@ -1,18 +1,16 @@
-[gd_scene load_steps=6 format=3 uid="uid://dswtxix3cejxr"]
+[gd_scene load_steps=7 format=3 uid="uid://drktl5eecd6sm"]
 
+[ext_resource type="Script" path="res://scripts/shop_ui.gd" id="1_3xn78"]
 [ext_resource type="Texture2D" uid="uid://cgquaod4kxad1" path="res://other/dice face.png" id="4_sdqcu"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_el2bd"]
 bg_color = Color(0.135082, 0.321104, 0.475407, 1)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vi4rs"]
-load_path = "res://.godot/imported/icon1.png-d55c08bc35457bf212542b7263e9f834.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_42d14"]
-load_path = "res://.godot/imported/icon2.jpg-40ff770da6399065552189670abbc28b.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xalt2"]
-load_path = "res://.godot/imported/icon3.png-f1255084200a1057dab8207afc9aa43c.ctex"
 
 [node name="Shop" type="Control"]
 layout_mode = 3
@@ -21,6 +19,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_3xn78")
 
 [node name="MainContainer" type="Panel" parent="."]
 layout_mode = 1

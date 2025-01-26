@@ -11,13 +11,15 @@ config_version=5
 [application]
 
 config/name="gamejam2025"
-run/main_scene="res://scenes/SplashScreen.tscn"
+run/main_scene="res://scenes/MainScene.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://other/icon.svg"
 
 [autoload]
 
 Globals="*res://scripts/globals.gd"
+GameManager="*res://scripts/game_manager.gd"
+Inventory="*res://scripts/inventory.gd"
 
 [display]
 

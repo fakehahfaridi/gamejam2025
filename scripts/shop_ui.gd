@@ -11,10 +11,6 @@ extends Control
 @onready var currency_label = $MainContainer/ShopBackground/Currency
 @onready var exit_button = $MainContainer/ExitButton
 
-# Reference to inventory & game manager
-var inventory
-var game_manager
-
 var shop_items = []  # Items currently in the shop
 var selected_item = null  # Selected item for purchasing
 
@@ -35,8 +31,6 @@ var item_descriptions = {
 }
 
 func _ready():
-	inventory = get_node("/root/GameManager/Inventory")
-	game_manager = get_node("/root/GameManager")
 
 	generate_shop()
 	update_ui()
@@ -46,7 +40,7 @@ func _ready():
 
 # **Generate shop items using inventory system**
 func generate_shop():
-	shop_items = inventory.get_random_items(3)
+	shop_items = Inventory.get_random_items(3)
 
 	for i in range(3):
 		if i < shop_items.size():
@@ -56,7 +50,7 @@ func generate_shop():
 
 # **Update currency UI**
 func update_ui():
-	currency_label.text = "$" + str(inventory.currency)
+	currency_label.text = "$" + str(Inventory.currency)
 
 # **Handle item selection**
 func select_item(item):
@@ -67,9 +61,9 @@ func select_item(item):
 
 # **Handle purchasing**
 func buy_selected_item():
-	if selected_item and inventory.currency >= selected_item["price"]:
-		inventory.subtract_currency(selected_item["price"])
-		inventory.add_item(selected_item["name"], 1)
+	if selected_item and Inventory.currency >= selected_item["price"]:
+		Inventory.subtract_currency(selected_item["price"])
+		Inventory.add_item(selected_item["name"], 1)
 		update_ui()
 		print("Bought: " + selected_item["name"])
 	else:
@@ -77,5 +71,6 @@ func buy_selected_item():
 
 # **Exit shop and return to main game**
 func exit_shop():
-	game_manager.start_next_level()
-	get_tree().change_scene_to_file("res://Scenes/MainGame.tscn")
+	print("exiting")
+	#GameManager.start_next_level()
+	get_tree().change_scene_to_file("res://scenes/MainScene.tscn")

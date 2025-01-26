@@ -11,3 +11,7 @@ res://scripts/logo.gd
 res://scripts/start_label.gd
 res://scripts/underwater_overlay.gd
 res://scripts/player.gd
+res://scripts/game_manager.gd
+res://scripts/inventory.gd
+res://scripts/shop_ui.gd
+res://scenes/Shop.tscn
