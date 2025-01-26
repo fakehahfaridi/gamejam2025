@@ -74,6 +74,7 @@ func reset_board(new_size: Vector2i):
 	# Update the global board size
 	Globals.board_size = new_size
 	map_size = Globals.board_size
+	Globals.calculate_board_size()
 
 	# Clear existing tiles and labels
 	clear()

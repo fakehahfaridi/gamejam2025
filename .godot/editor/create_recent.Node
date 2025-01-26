@@ -1,3 +1,7 @@
+Sprite2D
+Camera2D
+Label
+TextureRect
 ColorRect
 CanvasLayer
 Node2D
@@ -5,8 +9,5 @@ CharacterBody2D
 TileMapLayer
 CollisionShape2D
 Area2D
-Sprite2D
-Camera2D
-Label
 ProgressBar
 TileMap
