@@ -1,0 +1,242 @@
+[gd_scene load_steps=6 format=3 uid="uid://dswtxix3cejxr"]
+
+[ext_resource type="Texture2D" uid="uid://cgquaod4kxad1" path="res://other/dice face.png" id="4_sdqcu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_el2bd"]
+bg_color = Color(0.135082, 0.321104, 0.475407, 1)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vi4rs"]
+load_path = "res://.godot/imported/icon1.png-d55c08bc35457bf212542b7263e9f834.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_42d14"]
+load_path = "res://.godot/imported/icon2.jpg-40ff770da6399065552189670abbc28b.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xalt2"]
+load_path = "res://.godot/imported/icon3.png-f1255084200a1057dab8207afc9aa43c.ctex"
+
+[node name="Shop" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MainContainer" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_el2bd")
+
+[node name="ShopTitle" type="Label" parent="MainContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 1
+offset_left = 40.0
+offset_top = 40.0
+offset_right = 170.0
+offset_bottom = 107.0
+theme_override_font_sizes/font_size = 48
+text = "SHOP"
+horizontal_alignment = 3
+
+[node name="ShopBackground" type="Panel" parent="MainContainer"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -290.0
+offset_top = 60.0
+offset_right = 260.0
+offset_bottom = 510.0
+grow_horizontal = 2
+
+[node name="ShopGrid" type="HBoxContainer" parent="MainContainer/ShopBackground"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -155.0
+offset_right = 191.0
+offset_bottom = 600.0
+grow_horizontal = 2
+
+[node name="Item1" type="TextureButton" parent="MainContainer/ShopBackground/ShopGrid"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 4
+texture_normal = SubResource("CompressedTexture2D_vi4rs")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Item2" type="TextureButton" parent="MainContainer/ShopBackground/ShopGrid"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 4
+texture_normal = SubResource("CompressedTexture2D_42d14")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="Item3" type="TextureButton" parent="MainContainer/ShopBackground/ShopGrid"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 4
+texture_normal = SubResource("CompressedTexture2D_xalt2")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="Currency" type="Label" parent="MainContainer/ShopBackground"]
+custom_minimum_size = Vector2(100, 40)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -50.0
+offset_top = 40.0
+offset_right = 50.0
+offset_bottom = 95.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 40
+text = "$100"
+vertical_alignment = 1
+
+[node name="DescriptionBackground" type="Panel" parent="MainContainer"]
+custom_minimum_size = Vector2(300, 600)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -340.0
+offset_top = -300.0
+offset_right = -40.0
+offset_bottom = 300.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="DescriptionContainer" type="VBoxContainer" parent="MainContainer/DescriptionBackground"]
+custom_minimum_size = Vector2(300, 600)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -300.0
+offset_bottom = 300.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="ItemDescription" type="Label" parent="MainContainer/DescriptionBackground/DescriptionContainer"]
+custom_minimum_size = Vector2(20, 300)
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 24
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit vulputate feugiat. Donec vitae quam leo. Donec ac metus volutpat, lobortis tellus nec, pellentesque"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="BuyButton" type="Button" parent="MainContainer/DescriptionBackground/DescriptionContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_colors/font_hover_pressed_color = Color(0.205581, 0.485672, 0.671507, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "BUY"
+autowrap_mode = 3
+
+[node name="InventoryBackground" type="Panel" parent="MainContainer"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -290.0
+offset_top = -170.0
+offset_right = 260.0
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="InventoryGrid" type="HBoxContainer" parent="MainContainer/InventoryBackground"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -255.0
+offset_right = 261.0
+offset_bottom = 146.0
+grow_horizontal = 2
+
+[node name="PlayerItem1" type="TextureButton" parent="MainContainer/InventoryBackground/InventoryGrid"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 4
+texture_normal = SubResource("CompressedTexture2D_vi4rs")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="PlayerItem2" type="TextureButton" parent="MainContainer/InventoryBackground/InventoryGrid"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 4
+texture_normal = SubResource("CompressedTexture2D_vi4rs")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="PlayerItem3" type="TextureButton" parent="MainContainer/InventoryBackground/InventoryGrid"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 4
+texture_normal = SubResource("CompressedTexture2D_vi4rs")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="PlayerItem4" type="TextureButton" parent="MainContainer/InventoryBackground/InventoryGrid"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 4
+texture_normal = SubResource("CompressedTexture2D_vi4rs")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="PlayerItem5" type="TextureButton" parent="MainContainer/InventoryBackground/InventoryGrid"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 4
+texture_normal = SubResource("CompressedTexture2D_vi4rs")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="DiceImage" type="TextureRect" parent="MainContainer"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 40.0
+offset_top = -370.0
+offset_right = 180.0
+offset_bottom = -230.0
+grow_vertical = 0
+texture = ExtResource("4_sdqcu")
+expand_mode = 1
+
+[node name="ExitButton" type="Button" parent="MainContainer"]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -100.0
+offset_right = 300.0
+grow_vertical = 0
+theme_override_colors/font_hover_pressed_color = Color(0.705882, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.705882, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0.705882, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "EXIT"
