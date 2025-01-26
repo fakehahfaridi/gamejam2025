@@ -1,18 +1,26 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1737821812
-README.md::TextFile::-1::1737818397::0::1::::<><>::
+::res://::1737849535
+README.md::TextFile::-1::1737828206::0::1::::<><>::
 ::res://bgs/::1737758108
 ::res://other/::1737818471
 icon.svg::CompressedTexture2D::1163057623306170189::1737818397::1737818471::1::::<><>::
 Screenshot 2024-05-03 123359-orig.png::CompressedTexture2D::1949341549755951434::1737818397::1737818471::1::::<><>::
-::res://scenes/::1737821636
-MainScene.tscn::PackedScene::5929358920070876102::1737821636::0::1::::<><>::uid://bw3nc0d82rq4v::::res://tiles/Atlantis/Tileset1.png<>res://scripts/player.gd<>uid://qtnnh3n1kntd::::res://other/icon.svg<>res://scripts/oxygen.gd<>res://scripts/bubble.gd<>uid://21jmulaboyfa::::res://other/Screenshot 2024-05-03 123359-orig.png<>res://scripts/game_layer.gd
-::res://scripts/::1737821509
-bubble.gd::GDScript::-1::1737818397::0::1::::<>Area2D<>::
-game_layer.gd::GDScript::-1::1737821357::0::1::::<>TileMapLayer<>::
-oxygen.gd::GDScript::-1::1737818397::0::1::::<>ProgressBar<>::
-player.gd::GDScript::-1::1737821509::0::1::::<>CharacterBody2D<>::
+::res://scenes/::1737849527
+MainScene.tscn::PackedScene::5929358920070876102::1737849037::0::1::::<><>::uid://bw3nc0d82rq4v::::res://tiles/Atlantis/Tileset1.png<>res://scripts/player.gd<>uid://qtnnh3n1kntd::::res://other/icon.svg<>res://scripts/oxygen.gd<>res://scripts/bubble.gd<>uid://21jmulaboyfa::::res://other/Screenshot 2024-05-03 123359-orig.png<>res://scripts/game_layer.gd<>res://scripts/camera.gd<>res://scripts/dice.gd<>res://scripts/game_manager.gd
+wate_shader.gdshader::Shader::-1::1737849527::0::1::::<><>::
+::res://scripts/::1737848992
+bubble.gd::GDScript::-1::1737828205::0::1::::<>Area2D<>::
+camera.gd::GDScript::-1::1737848992::0::1::::<>Camera2D<>::
+dice.gd::GDScript::-1::1737837891::0::1::::<>Node2D<>::
+game_layer.gd::GDScript::-1::1737842711::0::1::::<>TileMapLayer<>::
+game_manager.gd::GDScript::-1::1737842976::0::1::::<>Node<>::
+globals.gd::GDScript::-1::1737847182::0::1::::<>Node<>::
+inventory.gd::GDScript::-1::1737838430::0::1::::<>Node<>::
+oxygen.gd::GDScript::-1::1737828205::0::1::::<>ProgressBar<>::
+player.gd::GDScript::-1::1737847022::0::1::::<>CharacterBody2D<>::
+shop.gd::GDScript::-1::1737838430::0::1::::<>Node<>::
 tilemap.gd::GDScript::-1::1737818397::0::1::::<>TileMapLayer<>::
+::res://shaders/::1737849535
 ::res://sprites/::1737758138
 ::res://tiles/::1737818397
 ::res://tiles/Atlantis/::1737818471

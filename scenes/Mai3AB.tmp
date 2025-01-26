@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cqqhw7pbxmlde"]
+[gd_scene load_steps=15 format=3 uid="uid://cqqhw7pbxmlde"]
 
 [ext_resource type="Texture2D" uid="uid://bw3nc0d82rq4v" path="res://tiles/Atlantis/Tileset1.png" id="1_jtxyx"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="2_0fd7p"]
@@ -10,7 +10,6 @@
 [ext_resource type="Script" path="res://scripts/camera.gd" id="8_2nwqb"]
 [ext_resource type="Script" path="res://scripts/dice.gd" id="8_wylk8"]
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="10_are4d"]
-[ext_resource type="Shader" path="res://shaders/wate_shader.gdshader" id="11_uxyg1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_udbc6"]
 
@@ -502,9 +501,6 @@ sources/0 = SubResource("TileSetAtlasSource_hec5e")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n27qk"]
 size = Vector2(11, 10)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_3lsgb"]
-shader = ExtResource("11_uxyg1")
-
 [node name="Main" type="Node2D"]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -563,6 +559,7 @@ drag_horizontal_enabled = true
 drag_left_margin = 1.0
 drag_right_margin = 1.0
 script = ExtResource("8_2nwqb")
+vertical_center_threshold = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GameManager/Player"]
 position = Vector2(7, 7)
@@ -574,15 +571,5 @@ position = Vector2(7, 7)
 scale = Vector2(0.101562, 0.0976565)
 texture = ExtResource("3_i2guy")
 metadata/_edit_lock_ = true
-
-[node name="UnderwaterOverlay" type="CanvasLayer" parent="."]
-
-[node name="ColorRect" type="ColorRect" parent="UnderwaterOverlay"]
-material = SubResource("ShaderMaterial_3lsgb")
-offset_left = -43.0
-offset_top = 1.0
-offset_right = 1953.0
-offset_bottom = 1130.0
-color = Color(0, 1, 1, 0.352941)
 
 [connection signal="rolled" from="Dice" to="GameManager/Player" method="_on_dice_rolled"]
