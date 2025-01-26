@@ -55,6 +55,12 @@ func move_to_tile(tile_coords: Vector2i):
 	
 	# Move the player to the corresponding world position
 	position = current_tile_to_position(tile_coords)
+	# Check if the tile is a hazard
+	var game_layer = get_parent().get_node("GameLayer")
+	if game_layer.is_hazard_tile(tile_coords):
+		var new_tile = calculate_new_tile(-2)
+		move_to_tile(new_tile)
+		print("You stepped on a hazard!")
 
 func current_tile_to_position(tile_coords: Vector2i) -> Vector2:
 	# Convert grid coordinates to world position

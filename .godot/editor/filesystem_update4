@@ -10,3 +10,4 @@ res://scripts/splash.gd
 res://scripts/logo.gd
 res://scripts/start_label.gd
 res://scripts/underwater_overlay.gd
+res://scripts/player.gd

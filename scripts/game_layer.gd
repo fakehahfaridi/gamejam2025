@@ -22,7 +22,7 @@ func generate_tiles():
 	map_size = Globals.board_size
 	clear()
 	print("Depth level: ", Globals.depth_level)
-	hazard_spawn_chance = float(Globals.depth_level)/10
+	hazard_spawn_chance = (0.05 + log(Globals.depth_level + 1) / 5) / (Globals.board_size.length() * 0.5)
 	print("Hazard spawn chance: ", hazard_spawn_chance)
 	var current_id = 1  # Start numbering from 1
 	for y in range(map_size.y):

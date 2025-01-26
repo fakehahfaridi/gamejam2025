@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://cqqhw7pbxmlde"]
+[gd_scene load_steps=20 format=3 uid="uid://cqqhw7pbxmlde"]
 
 [ext_resource type="Texture2D" uid="uid://bw3nc0d82rq4v" path="res://tiles/Atlantis/Tileset1.png" id="1_jtxyx"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="2_0fd7p"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://21jmulaboyfa" path="res://other/Screenshot 2024-05-03 123359-orig.png" id="5_jlvj0"]
 [ext_resource type="Script" path="res://scripts/game_layer.gd" id="7_08wnj"]
 [ext_resource type="Script" path="res://scripts/camera.gd" id="8_2nwqb"]
+[ext_resource type="Script" path="res://scripts/hazards.gd" id="8_wafx5"]
 [ext_resource type="Script" path="res://scripts/dice.gd" id="8_wylk8"]
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="10_are4d"]
 [ext_resource type="Material" uid="uid://cxqik3numaw1m" path="res://shaders/water.tres" id="11_ho3sd"]
@@ -550,6 +551,10 @@ script = ExtResource("10_are4d")
 [node name="GameLayer" type="TileMapLayer" parent="GameManager"]
 tile_set = SubResource("TileSet_gtmwy")
 script = ExtResource("7_08wnj")
+
+[node name="Hazards" type="Node2D" parent="GameManager/GameLayer"]
+z_index = 3
+script = ExtResource("8_wafx5")
 
 [node name="Player" type="CharacterBody2D" parent="GameManager"]
 z_index = 2
