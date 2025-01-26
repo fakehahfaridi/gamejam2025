@@ -1,6 +1,12 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1737752836
-icon.svg::CompressedTexture2D::1163057623306170189::1737751031::1737752774::1::::<><>::
-node_2d.tscn::PackedScene::5929358920070876102::1737752026::0::1::::<><>::
-README.md::TextFile::-1::1737751842::0::1::::<><>::
-Screenshot 2024-05-03 123359-orig.png::CompressedTexture2D::1949341549755951434::1737752618::1737752618::1::::<><>::
+::res://::1737850642
+icon.svg::CompressedTexture2D::7849090957417442433::1737850642::1737850645::1::::<><>::
+node_2d.tscn::PackedScene::-1::1737850642::0::1::::<><>::
+README.md::TextFile::-1::1737850642::0::1::::<><>::
+Screenshot 2024-05-03 123359-orig.png::CompressedTexture2D::8536971349318802927::1737850642::1737850645::1::::<><>::
+::res://scenes/::1737850642
+MainScene.tscn::PackedScene::5929358920070876102::1737850612::0::1::::<><>::uid://bw3nc0d82rq4v::::res://tiles/Atlantis/Tileset1.png<>res://scripts/player.gd<>uid://qtnnh3n1kntd::::res://other/icon.svg<>res://scripts/oxygen.gd<>res://scripts/bubble.gd<>uid://21jmulaboyfa::::res://other/Screenshot 2024-05-03 123359-orig.png<>res://scripts/game_layer.gd<>res://scripts/camera.gd<>res://scripts/dice.gd<>res://scripts/game_manager.gd<>res://scripts/ScoreManager.gd
+::res://scripts/::1737850642
+game_manager.gd::GDScript::-1::1737850642::0::1::::<>Node<>::
+player.gd::GDScript::-1::1737850642::0::1::::<>CharacterBody2D<>::
+ScoreManager.gd::GDScript::-1::1737850642::0::1::::<>Node<>::
