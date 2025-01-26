@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
-@export var cell_size = Vector2(16, 16)  # Size of each tile
-@export var map_size = Vector2i(4, 4)  # Size of the map grid
+@export var cell_size = Globals.CELL_SIZE # Size of each tile
+@export var map_size = Globals.board_size  # Size of the map grid
 @export var starting_tile = Vector2i(0, 0)  # Starting tile position
 
 var current_tile = Vector2i(0, 0)  # Tracks the current tile position
@@ -13,32 +13,41 @@ func _ready():
 	position = current_tile_to_position(starting_tile)
 
 func reset_position(starting_tile: Vector2i):
+	map_size = Globals.board_size
 	position = current_tile_to_position(starting_tile)
+	current_tile = Vector2i(0, 0)
+	print("reset pos")
 
 func move_by_tiles(steps: int):
 	# Calculate the final position after moving the given steps
 	var new_tile = calculate_new_tile(steps)
 	move_to_tile(new_tile)
-	var last_tile = Vector2i(0, 0)
-	if Globals.board_size.y % 2 == 0:
-		last_tile = Vector2i(0, Globals.board_size.y - 1)
-	else:
-		last_tile = Vector2i(Globals.board_size.x - 1, Globals.board_size.y - 1)
+	
+	# Determine the last tile based on the board size and zigzag pattern
+	var last_tile = Vector2i(
+		(Globals.board_size.x - 1) if Globals.board_size.y % 2 != 0 else 0,
+		Globals.board_size.y - 1
+		)
 		
+	# Debugging information
+	print("Player moved to:", new_tile, "Last tile is:", last_tile)
+	
 	# Check if the player has reached the last tile
-	print(new_tile, last_tile)
-	if new_tile == (last_tile):
+	if new_tile == last_tile:
 		print("Player reached the end of the board!")
 		get_parent().on_player_reached_end()
 
-func calculate_new_tile(steps: int) -> Vector2i:
-	var tile_id = get_tile_id(current_tile) + steps  # Convert current tile to tile ID and add steps
 
+func calculate_new_tile(steps: int) -> Vector2i:
+	# Convert current tile to tile ID and add steps
+	var tile_id = get_tile_id(current_tile) + steps
+	
 	# Constrain the tile ID within bounds
-	tile_id = clamp(tile_id, 1, map_size.x * map_size.y)
+	tile_id = clamp(tile_id, 1, Globals.board_size.x * Globals.board_size.y)
 	
 	# Convert the tile ID back to grid coordinates
 	return tile_id_to_coords(tile_id)
+
 
 func move_to_tile(tile_coords: Vector2i):
 	# Update the current tile position

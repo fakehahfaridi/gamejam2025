@@ -1,6 +1,6 @@
 extends TileMapLayer
 
-@export var map_size = Vector2i(4, 4)  # Size of the map grid
+@export var map_size = Globals.board_size  # Size of the map grid
 @export var atlas_default_coords = Vector2i(8, 5)  # Default ground tile coords
 @export var atlas_bubble_coords = Vector2i(8, 4)  # Bubble tile coords
 @export var atlas_hazard_coords = Vector2i(8, 4)  # Hazard tile coords
@@ -13,13 +13,8 @@ var tile_ids = {}  # Stores tile IDs keyed by grid position
 func _ready():
 	generate_tiles()
 
-func get_map_size_x():
-	return map_size.x
-
-func get_map_size_y():
-	return map_size.y
-
 func generate_tiles():
+	map_size = Globals.board_size
 	clear()
 	var current_id = 1  # Start numbering from 1
 	for y in range(map_size.y):
@@ -76,15 +71,18 @@ func display_tile_numbers():
 
 # Reset the board with a new size
 func reset_board(new_size: Vector2i):
-	# Update the map size
-	map_size = new_size
-	
-	# Clear existing tiles
+	# Update the global board size
+	Globals.board_size = new_size
+	map_size = Globals.board_size
+
+	# Clear existing tiles and labels
 	clear()
+	for child in get_children():
+		if child is Label:
+			child.queue_free()
+
 	# Regenerate tiles for the new size
-	for x in range(map_size.x):
-		for y in range(map_size.y):
-			set_cell_atlas(Vector2i(x, y), atlas_default_coords)
+	generate_tiles()
 
 
 # Converts grid coordinates (Vector2i) to world coordinates (Vector2)
