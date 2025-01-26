@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://dswtxix3cejxr"]
+
+[node name="Shop" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ShopBackground" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.309804, 0.541176, 1)
+
+[node name="ShopGrid" type="GridContainer" parent="ShopBackground"]
+custom_minimum_size = Vector2(400, 300)
+layout_mode = 0
+offset_right = 400.0
+offset_bottom = 300.0
+columns = 3
+
+[node name="ItemDescriptionPanel" type="Panel" parent="ShopBackground"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BuyButton" type="Button" parent="ShopBackground"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="CurrencyLabel" type="Label" parent="ShopBackground"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="InventoryDisplay" type="HBoxContainer" parent="ShopBackground"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ExitButton" type="Button" parent="ShopBackground"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0

@@ -43,7 +43,7 @@ func print_shop():
 	print("------------------\n")
 
 func _ready():
-	inventory = get_node("/root/Main/Inventory")
+	inventory = get_node("/root/Main/GameManager/Inventory")
 	
 	print("Generating Shop...")
 	generate_shop()

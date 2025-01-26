@@ -1,3 +1,11 @@
 res://scenes/MainScene.tscn
 res://scripts/inventory.gd
 res://scripts/shop.gd
+res://scripts/bubble.gd
+res://scripts/game_layer.gd
+res://scripts/oxygen.gd
+res://scripts/player.gd
+res://README.md
+res://scripts/game_manager.gd
+res://scenes/Shop.tscn
+res://scripts/globals.gd

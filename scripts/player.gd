@@ -5,29 +5,45 @@ extends CharacterBody2D
 @export var starting_tile = Vector2i(0, 0)  # Starting tile position
 
 var current_tile = Vector2i(0, 0)  # Tracks the current tile position
+var target_position: Vector2  # Target world position for the player
+var move_speed = 200  # Speed of movement (adjust as needed)
 
 func _ready():
 	# Place the player on the starting tile
+	position = current_tile_to_position(starting_tile)
+
+func reset_position(starting_tile: Vector2i):
 	position = current_tile_to_position(starting_tile)
 
 func move_by_tiles(steps: int):
 	# Calculate the final position after moving the given steps
 	var new_tile = calculate_new_tile(steps)
 	move_to_tile(new_tile)
+	var last_tile = Vector2i(0, 0)
+	if Globals.board_size.y % 2 == 0:
+		last_tile = Vector2i(0, Globals.board_size.y - 1)
+	else:
+		last_tile = Vector2i(Globals.board_size.x - 1, Globals.board_size.y - 1)
+		
+	# Check if the player has reached the last tile
+	print(new_tile, last_tile)
+	if new_tile == (last_tile):
+		print("Player reached the end of the board!")
+		get_parent().on_player_reached_end()
 
 func calculate_new_tile(steps: int) -> Vector2i:
 	var tile_id = get_tile_id(current_tile) + steps  # Convert current tile to tile ID and add steps
 
 	# Constrain the tile ID within bounds
 	tile_id = clamp(tile_id, 1, map_size.x * map_size.y)
-
+	
 	# Convert the tile ID back to grid coordinates
 	return tile_id_to_coords(tile_id)
 
 func move_to_tile(tile_coords: Vector2i):
 	# Update the current tile position
 	current_tile = tile_coords
-
+	
 	# Move the player to the corresponding world position
 	position = current_tile_to_position(tile_coords)
 
@@ -61,6 +77,10 @@ func tile_id_to_coords(tile_id: int) -> Vector2i:
 
 func _process(delta):
 	if Input.is_action_just_pressed("ui_right"):
-		move_by_tiles(3)  # Move 1 tile forward
+		move_by_tiles(1)  # Move 1 tile forward
 	elif Input.is_action_just_pressed("ui_left"):
-		move_by_tiles(-3)  # Move 1 tile backward 
+		move_by_tiles(-1)  # Move 1 tile backward 
+
+
+func _on_dice_rolled(result):
+	move_by_tiles(result)

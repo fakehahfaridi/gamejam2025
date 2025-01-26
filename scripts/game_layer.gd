@@ -12,9 +12,15 @@ var tile_ids = {}  # Stores tile IDs keyed by grid position
 
 func _ready():
 	generate_tiles()
-	display_tile_numbers()
+
+func get_map_size_x():
+	return map_size.x
+
+func get_map_size_y():
+	return map_size.y
 
 func generate_tiles():
+	clear()
 	var current_id = 1  # Start numbering from 1
 	for y in range(map_size.y):
 		if y % 2 == 0:
@@ -27,6 +33,7 @@ func generate_tiles():
 			for x in range(map_size.x - 1, -1, -1):
 				assign_tile(Vector2i(x, y), current_id)
 				current_id += 1
+	display_tile_numbers()
 
 func assign_tile(grid_pos: Vector2i, tile_id: int):
 	var tile_coords = atlas_default_coords  # Default tile
@@ -48,6 +55,10 @@ func set_cell_atlas(cell_pos: Vector2i, atlas_coords: Vector2i):
 	set_cell(cell_pos, 0, atlas_coords)  # 0 is the atlas ID for the TileSet
 
 func display_tile_numbers():
+	for child in get_children():
+		if child is Label:
+			child.queue_free()
+			
 	for grid_pos in tile_ids.keys():
 		var tile_id = tile_ids[grid_pos]
 		var world_pos = map_to_world(grid_pos)
@@ -63,7 +74,17 @@ func display_tile_numbers():
 		label.position = world_pos + CELL_SIZE / 2 - Vector2(8, 8)  # Adjust for label size
 		add_child(label)
 
-
+# Reset the board with a new size
+func reset_board(new_size: Vector2i):
+	# Update the map size
+	map_size = new_size
+	
+	# Clear existing tiles
+	clear()
+	# Regenerate tiles for the new size
+	for x in range(map_size.x):
+		for y in range(map_size.y):
+			set_cell_atlas(Vector2i(x, y), atlas_default_coords)
 
 
 # Converts grid coordinates (Vector2i) to world coordinates (Vector2)
