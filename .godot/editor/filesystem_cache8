@@ -1,31 +1,42 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1737909939
+::res://::1737910396
 README.md::TextFile::-1::1737828206::0::1::::<><>::
 ::res://bgs/::1737906072
 Undersea.png::CompressedTexture2D::147058244816409669::1737906072::1737906072::1::::<><>::
-::res://other/::1737818471
+::res://other/::1737918101
+bubble_booster.png::CompressedTexture2D::784998317306719481::1737918101::1737918106::1::::<><>::
+dice face.png::CompressedTexture2D::5228219554427892152::1737918101::1737918106::1::::<><>::
+dice_modifier.png::CompressedTexture2D::5823961410867277836::1737918101::1737918106::1::::<><>::
 icon.svg::CompressedTexture2D::1163057623306170189::1737818397::1737818471::1::::<><>::
+oxygen_tank.jpg::CompressedTexture2D::8059853548952759917::1737918101::1737918106::1::::<><>::
 Screenshot 2024-05-03 123359-orig.png::CompressedTexture2D::1949341549755951434::1737818397::1737818471::1::::<><>::
-::res://scenes/::1737909957
-MainScene.tscn::PackedScene::5929358920070876102::1737909944::0::1::::<><>::uid://bw3nc0d82rq4v::::res://tiles/Atlantis/Tileset1.png<>res://scripts/player.gd<>uid://qtnnh3n1kntd::::res://other/icon.svg<>res://scripts/oxygen.gd<>res://scripts/bubble.gd<>uid://21jmulaboyfa::::res://other/Screenshot 2024-05-03 123359-orig.png<>res://scripts/game_layer.gd<>res://scripts/camera.gd<>res://scripts/dice.gd<>res://scripts/game_manager.gd<>uid://cxqik3numaw1m::::res://shaders/water.tres<>res://scripts/bg.gd<>uid://myes0a3qvgni::::res://sprites/Undersea.png
-SplashScreen.tscn::PackedScene::7130076776611870258::1737909957::0::1::::<><>::
-::res://scripts/::1737909702
+::res://scenes/::1737918101
+MainScene.tscn::PackedScene::5929358920070876102::1737917069::0::1::::<><>::uid://bw3nc0d82rq4v::::res://tiles/Atlantis/Tileset1.png<>res://scripts/player.gd<>uid://qtnnh3n1kntd::::res://other/icon.svg<>res://scripts/oxygen.gd<>res://scripts/bubble.gd<>uid://21jmulaboyfa::::res://other/Screenshot 2024-05-03 123359-orig.png<>res://scripts/game_layer.gd<>res://scripts/camera.gd<>res://scripts/hazards.gd<>res://scripts/dice.gd<>res://scripts/game_manager.gd<>uid://cxqik3numaw1m::::res://shaders/water.tres<>res://scripts/bg.gd<>uid://myes0a3qvgni::::res://sprites/Undersea.png<>res://scripts/underwater_overlay.gd
+Shop.tscn::PackedScene::-1::1737918101::0::1::::<><>::
+SplashScreen.tscn::PackedScene::7130076776611870258::1737917070::0::1::::<><>::res://scripts/splash.gd<>uid://b1ppnxpyujukh::::res://sprites/anchored.png<>uid://myes0a3qvgni::::res://sprites/Undersea.png<>res://scripts/logo.gd<>res://scripts/start_label.gd
+::res://scripts/::1737918101
 bg.gd::GDScript::-1::1737906785::0::1::::<>Sprite2D<>::
 bubble.gd::GDScript::-1::1737828205::0::1::::<>Area2D<>::
 camera.gd::GDScript::-1::1737909702::0::1::::<>Camera2D<>::
 dice.gd::GDScript::-1::1737837891::0::1::::<>Node2D<>::
-game_layer.gd::GDScript::-1::1737907911::0::1::::<>TileMapLayer<>::
+game_layer.gd::GDScript::-1::1737914604::0::1::::<>TileMapLayer<>::
 game_manager.gd::GDScript::-1::1737851171::0::1::::<>Node<>::
 globals.gd::GDScript::-1::1737851171::0::1::::<>Node<>::
+hazards.gd::GDScript::-1::1737914115::0::1::::<>Node2D<>::
 inventory.gd::GDScript::-1::1737851162::0::1::::<>Node<>::
 oxygen.gd::GDScript::-1::1737828205::0::1::::<>ProgressBar<>::
-player.gd::GDScript::-1::1737851171::0::1::::<>CharacterBody2D<>::
+player.gd::GDScript::-1::1737916877::0::1::::<>CharacterBody2D<>::
+logo.gd::GDScript::-1::1737911771::0::1::::<>Sprite2D<>::
+shop_ui.gd::GDScript::-1::1737918101::0::1::::<>Control<>::
+underwater_overlay.gd::GDScript::-1::1737912663::0::1::::<>ColorRect<>::
+start_label.gd::GDScript::-1::1737911818::0::1::::<>Label<>::
+splash.gd::GDScript::-1::1737911485::0::1::::<>Node2D<>::
 shader_script.gd::GDScript::-1::1737851171::0::1::::<>RefCounted<>::
 shop.gd::GDScript::-1::1737851162::0::1::::<>Node<>::
 tilemap.gd::GDScript::-1::1737818397::0::1::::<>TileMapLayer<>::
-::res://shaders/::1737909957
+::res://shaders/::1737917070
 water.tres::ShaderMaterial::6420719900668116312::1737909944::0::1::::<><>::res://shaders/wate_shader.gdshader
-wate_shader.gdshader::Shader::-1::1737909957::0::1::::<><>::
+wate_shader.gdshader::Shader::-1::1737917070::0::1::::<><>::
 ::res://sprites/::1737910135
 anchored.png::CompressedTexture2D::4243231487131773939::1737910135::1737910135::1::::<><>::
 Undersea.png::CompressedTexture2D::892087516393336834::1737906201::1737909940::1::::<><>::
