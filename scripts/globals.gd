@@ -1,6 +1,7 @@
 extends Node
 
 # Global game variables
+var new_run = true
 var depth_level = 1  # Current depth level
 var board_size = Vector2i(4, 4)  # Current board size (NxN)
 const CELL_SIZE = 16
